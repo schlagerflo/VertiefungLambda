@@ -4,6 +4,9 @@ import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class LambdaUebungenTest {
@@ -22,7 +25,6 @@ class LambdaUebungenTest {
         System.out.println();
         assertEquals(expResult, result);
     }
-
     @Test
     void sumTestTwoNegativeNumbers() {
         System.out.println("sumTestTwoNegativeNumbers");
@@ -36,7 +38,6 @@ class LambdaUebungenTest {
         System.out.println();
         assertEquals(expResult, result);
     }
-
     @Test
     void sumTestOnePositiveOneNegativeNumber() {
         System.out.println("sumTestOnePositiveOneNegativeNumber");
@@ -65,7 +66,6 @@ class LambdaUebungenTest {
         System.out.println();
         assertEquals(expResult, result);
     }
-
     @Test
     void isStringEmptyTestWithEmptyString() {
         System.out.println("isStringEmptyTestWithEmptyString");
@@ -78,7 +78,6 @@ class LambdaUebungenTest {
         System.out.println();
         assertEquals(expResult, result);
     }
-
     @Test
     void isStringEmptyTestWithEmptyStringButBlank() {
         System.out.println("isStringEmptyTestWithEmptyStringButBlank");
@@ -89,6 +88,50 @@ class LambdaUebungenTest {
         System.out.println("Expected: " + expResult);
         System.out.println("Result: " + result);
         System.out.println();
+        assertEquals(expResult, result);
+    }
+
+    //3. Write a Java program to implement a lambda expression to convert a list of strings to uppercase and lowercase.
+    @Test
+    void toUpperCaseTest() {
+        System.out.println("toUpperCaseTest");
+        List<String> list = new ArrayList<>();
+        list.add("Florian");
+        list.add("Tobias");
+        list.add("Lukas");
+
+        List<String> expResult = new ArrayList<>();
+        expResult.add("FLORIAN");
+        expResult.add("TOBIAS");
+        expResult.add("LUKAS");
+
+        LambdaUebungen instance = new LambdaUebungen();
+        List<String> result = instance.toUpperCase(list);
+        for (int i = 0; i < list.size(); i++){
+            System.out.println("Expected: " + expResult.get(i));
+            System.out.println("Result: "  + result.get(i));
+        }
+        assertEquals(expResult, result);
+    }
+    @Test
+    void toLowerCaseTest() {
+        System.out.println("toLowerCaseTest");
+        List<String> list = new ArrayList<>();
+        list.add("FLORIAN");
+        list.add("TOBIAS");
+        list.add("LUKAS");
+
+        List<String> expResult = new ArrayList<>();
+        expResult.add("florian");
+        expResult.add("tobias");
+        expResult.add("lukas");
+
+        LambdaUebungen instance = new LambdaUebungen();
+        List<String> result = instance.toLowerCase(list);
+        for (int i = 0; i < list.size(); i++){
+            System.out.println("Expected: " + expResult.get(i));
+            System.out.println("Result: "  + result.get(i));
+        }
         assertEquals(expResult, result);
     }
 }

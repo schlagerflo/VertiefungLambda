@@ -1,9 +1,11 @@
 package at.htlgkr.schlagerflorian;
 
+import at.htlgkr.schlagerflorian.interfaces.ListToUpperLowerCase;
 import at.htlgkr.schlagerflorian.interfaces.StringIsEmpty;
 import at.htlgkr.schlagerflorian.interfaces.SumConverter;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class LambdaUebungen {
     public static void main(String[] args) {
@@ -22,5 +24,17 @@ public class LambdaUebungen {
         return isEmpty.isStringEmpty(s);
     }
 
-    
+    //3. Write a Java program to implement a lambda expression to convert a list of strings to uppercase and lowercase.
+    public List<String> toUpperCase (List<String> list){
+        ListToUpperLowerCase toUpperCase = list1 -> list1.stream()
+                .map(s -> s.toUpperCase())
+                .collect(Collectors.toList());
+        return toUpperCase.toUpperLowerCase(list);
+    }
+    public List<String> toLowerCase (List<String> list){
+        ListToUpperLowerCase toLowerCase = list1 -> list1.stream()
+                .map(s -> s.toLowerCase())
+                .collect(Collectors.toList());
+        return toLowerCase.toUpperLowerCase(list);
+    }
 }
