@@ -70,4 +70,12 @@ public class LambdaUebungen {
                 .orElse(0.0);
         return listFindAverage.findAverage(list);
     }
+
+    //7. Write a Java program to implement a lambda expression to remove duplicates from a list of integers.
+    public List<Integer> removeDuplicates (List<Integer> list){
+        ListRemoveDuplicates removeDuplicates = list1 -> list1.stream()
+                .distinct()
+                .collect(Collectors.toList());
+        return removeDuplicates.removeDuplicatesFromList(list);
+    }
 }

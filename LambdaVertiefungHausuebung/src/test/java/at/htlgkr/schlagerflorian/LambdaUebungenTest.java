@@ -213,4 +213,30 @@ class LambdaUebungenTest {
         System.out.println("Result: " + result);
         assertEquals(expResult, result);
     }
+
+    //Write a Java program to implement a lambda expression to remove duplicates from a list of integers.
+    @Test
+    void removeDuplicatesTest() {
+        System.out.println("removeDuplicatesTest");
+        List<Integer> list = new ArrayList<>();
+        list.add(3);
+        list.add(7);
+        list.add(1);
+        list.add(4);
+        list.add(7);
+
+        List<Integer> expResult = new ArrayList<>();
+        expResult.add(3);
+        expResult.add(7);
+        expResult.add(1);
+        expResult.add(4);
+
+        LambdaUebungen instance = new LambdaUebungen();
+        List<Integer> result = instance.removeDuplicates(list);
+        for (int i = 0; i < expResult.size(); i++){
+            System.out.println("Expected: " + expResult.get(i));
+            System.out.println("Result: "  + result.get(i));
+        }
+        assertEquals(expResult, result);
+    }
 }
