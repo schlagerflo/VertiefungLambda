@@ -214,7 +214,7 @@ class LambdaUebungenTest {
         assertEquals(expResult, result);
     }
 
-    //Write a Java program to implement a lambda expression to remove duplicates from a list of integers.
+    //7. Write a Java program to implement a lambda expression to remove duplicates from a list of integers.
     @Test
     void removeDuplicatesTest() {
         System.out.println("removeDuplicatesTest");
@@ -237,6 +237,20 @@ class LambdaUebungenTest {
             System.out.println("Expected: " + expResult.get(i));
             System.out.println("Result: "  + result.get(i));
         }
+        assertEquals(expResult, result);
+    }
+
+    //8. Write a Java program to implement a lambda expression to calculate the factorial of a given number.
+    @Test
+    void calculateFactorial() {
+        int number = 5;
+
+        int expResult = 120;
+
+        LambdaUebungen instance = new LambdaUebungen();
+        int result = instance.calculateFactorial(number);
+        System.out.println("Expected: " + expResult);
+        System.out.println("Result: "  + result);
         assertEquals(expResult, result);
     }
 }

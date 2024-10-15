@@ -12,7 +12,7 @@ public class LambdaUebungen {
 
     }
 
-    //1. Write a Java program to implement a lambda expression to find the sum of two integers
+    //1. Write a Java program to implement a lambda expression to find the sum of two integers.
     public int sum (int number1, int number2){
         SumConverter sum = (int numberOne, int numberTwo) -> (numberOne + numberTwo);
         return sum.sumConverter(number1, number2);
@@ -77,5 +77,17 @@ public class LambdaUebungen {
                 .distinct()
                 .collect(Collectors.toList());
         return removeDuplicates.removeDuplicatesFromList(list);
+    }
+
+    //8. Write a Java program to implement a lambda expression to calculate the factorial of a given number.
+    public int calculateFactorial (int number){
+        FactorialCalculator calculator = n -> {
+            int result = 1;
+            for (int i = 1; i <= n; i++){
+                result *= i;
+            }
+            return result;
+        };
+        return calculator.calculateFactorial(number);
     }
 }
