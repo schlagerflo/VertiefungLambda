@@ -22,7 +22,6 @@ class LambdaUebungenTest {
         int result = instance.sum(number1, number2);
         System.out.println("Expected: " + expResult);
         System.out.println("Result: " + result);
-        System.out.println();
         assertEquals(expResult, result);
     }
     @Test
@@ -35,7 +34,6 @@ class LambdaUebungenTest {
         int result = instance.sum(number1, number2);
         System.out.println("Expected: " + expResult);
         System.out.println("Result: " + result);
-        System.out.println();
         assertEquals(expResult, result);
     }
     @Test
@@ -48,7 +46,6 @@ class LambdaUebungenTest {
         int result = instance.sum(number1, number2);
         System.out.println("Expected: " + expResult);
         System.out.println("Result: " + result);
-        System.out.println();
         assertEquals(expResult, result);
     }
 
@@ -63,7 +60,6 @@ class LambdaUebungenTest {
         boolean result = instance.isStringEmpty(s);
         System.out.println("Expected: " + expResult);
         System.out.println("Result: " + result);
-        System.out.println();
         assertEquals(expResult, result);
     }
     @Test
@@ -75,7 +71,6 @@ class LambdaUebungenTest {
         boolean result = instance.isStringEmpty(s);
         System.out.println("Expected: " + expResult);
         System.out.println("Result: " + result);
-        System.out.println();
         assertEquals(expResult, result);
     }
     @Test
@@ -87,7 +82,6 @@ class LambdaUebungenTest {
         boolean result = instance.isStringEmpty(s);
         System.out.println("Expected: " + expResult);
         System.out.println("Result: " + result);
-        System.out.println();
         assertEquals(expResult, result);
     }
 
@@ -177,18 +171,19 @@ class LambdaUebungenTest {
 
     //5. Write a Java program to implement a lambda expression to sort a list of strings according to their length (descending).
     @Test
-    void sortListPerLength() {
+    void sortListPerLengthTest() {
+        System.out.println("sortListPerLengthTest");
         List<String> list = new ArrayList<>();
         list.add("Hello");
         list.add("Parameter");
         list.add("Hi");
-        list.add("Florian");
+        list.add(" ");
 
         List<String> expResult = new ArrayList<>();
         expResult.add("Parameter");
-        expResult.add("Florian");
         expResult.add("Hello");
         expResult.add("Hi");
+        expResult.add(" ");
 
         LambdaUebungen instance = new LambdaUebungen();
         List<String> result = instance.sortListPerLength(list);
@@ -196,6 +191,26 @@ class LambdaUebungenTest {
             System.out.println("Expected: " + expResult.get(i));
             System.out.println("Result: "  + result.get(i));
         }
+        assertEquals(expResult, result);
+    }
+
+    //6. Write a Java program to implement a lambda expression to find the average of a list of doubles.
+    @Test
+    void findAverageTest() {
+        System.out.println("findAverageTest");
+        List<Double> list = new ArrayList<>();
+        list.add(3.5);
+        list.add(7.5);
+        list.add(4.5);
+        list.add(6.5);
+        list.add(5.5);
+
+        double expResult = 5.5;
+
+        LambdaUebungen instance = new LambdaUebungen();
+        double result = instance.findAverage(list);
+        System.out.println("Expected: " + expResult);
+        System.out.println("Result: " + result);
         assertEquals(expResult, result);
     }
 }

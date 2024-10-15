@@ -2,6 +2,7 @@ package at.htlgkr.schlagerflorian;
 
 import at.htlgkr.schlagerflorian.interfaces.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
@@ -59,5 +60,14 @@ public class LambdaUebungen {
                 .sorted((o1, o2) -> o2.length() - o1.length())
                 .collect(Collectors.toList());
         return sortListPerLength.sortList(list);
+    }
+
+    //6. Write a Java program to implement a lambda expression to find the average of a list of doubles.
+    public double findAverage (List<Double> list){
+        ListFindAverage listFindAverage = list1 -> list1.stream()
+                .mapToDouble(Double::doubleValue)
+                .average()
+                .orElse(0.0);
+        return listFindAverage.findAverage(list);
     }
 }
