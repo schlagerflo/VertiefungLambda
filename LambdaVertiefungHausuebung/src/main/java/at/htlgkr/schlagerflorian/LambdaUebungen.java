@@ -1,10 +1,12 @@
 package at.htlgkr.schlagerflorian;
 
+import at.htlgkr.schlagerflorian.interfaces.IntIsEvenIsOdd;
 import at.htlgkr.schlagerflorian.interfaces.ListToUpperLowerCase;
 import at.htlgkr.schlagerflorian.interfaces.StringIsEmpty;
 import at.htlgkr.schlagerflorian.interfaces.SumConverter;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 public class LambdaUebungen {
@@ -36,5 +38,21 @@ public class LambdaUebungen {
                 .map(s -> s.toLowerCase())
                 .collect(Collectors.toList());
         return toLowerCase.toUpperLowerCase(list);
+    }
+
+    //4. Write a Java program to implement a lambda expression to filter out even and odd numbers from a list of integers.
+    public List<Integer> filterOutEven (List<Integer> list){
+        IntIsEvenIsOdd filterOutEven = list1 -> list1.stream()
+                .filter(i -> i > 0)
+                .filter(i -> i % 2 != 0)
+                .collect(Collectors.toList());
+        return filterOutEven.isEvenIsOdd(list);
+    }
+    public List<Integer> filterOutOdd (List<Integer> list){
+        IntIsEvenIsOdd filterOutOdd = list1 -> list1.stream()
+                .filter(i -> i > 0)
+                .filter(i -> i % 2 == 0)
+                .collect(Collectors.toList());
+        return filterOutOdd.isEvenIsOdd(list);
     }
 }

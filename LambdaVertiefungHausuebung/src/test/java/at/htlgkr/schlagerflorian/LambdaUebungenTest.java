@@ -134,4 +134,44 @@ class LambdaUebungenTest {
         }
         assertEquals(expResult, result);
     }
+
+    //4. Write a Java program to implement a lambda expression to filter out even and odd numbers from a list of integers.
+    @Test
+    void filterOutEvenTest() {
+        System.out.println("filterOutEvenTest");
+        List<Integer> list = new ArrayList<>();
+        list.add(200);
+        list.add(10);
+        list.add(3);
+
+        List<Integer> expResult = new ArrayList<>();
+        expResult.add(3);
+
+        LambdaUebungen instance = new LambdaUebungen();
+        List<Integer> result = instance.filterOutEven(list);
+        for (int i = 0; i < expResult.size(); i++){
+            System.out.println("Expected: " + expResult.get(i));
+            System.out.println("Result: "  + result.get(i));
+        }
+        assertEquals(expResult, result);
+    }
+    @Test
+    void filterOutOddTest() {
+        System.out.println("filterOutOddTest");
+        List<Integer> list = new ArrayList<>();
+        list.add(38);
+        list.add(17);
+        list.add(-12);
+
+        List<Integer> expResult = new ArrayList<>();
+        expResult.add(38);
+
+        LambdaUebungen instance = new LambdaUebungen();
+        List<Integer> result = instance.filterOutOdd(list);
+        for (int i = 0; i < expResult.size(); i++){
+            System.out.println("Expected: " + expResult.get(i));
+            System.out.println("Result: "  + result.get(i));
+        }
+        assertEquals(expResult, result);
+    }
 }
