@@ -174,4 +174,28 @@ class LambdaUebungenTest {
         }
         assertEquals(expResult, result);
     }
+
+    //5. Write a Java program to implement a lambda expression to sort a list of strings according to their length (descending).
+    @Test
+    void sortListPerLength() {
+        List<String> list = new ArrayList<>();
+        list.add("Hello");
+        list.add("Parameter");
+        list.add("Hi");
+        list.add("Florian");
+
+        List<String> expResult = new ArrayList<>();
+        expResult.add("Parameter");
+        expResult.add("Florian");
+        expResult.add("Hello");
+        expResult.add("Hi");
+
+        LambdaUebungen instance = new LambdaUebungen();
+        List<String> result = instance.sortListPerLength(list);
+        for (int i = 0; i < expResult.size(); i++){
+            System.out.println("Expected: " + expResult.get(i));
+            System.out.println("Result: "  + result.get(i));
+        }
+        assertEquals(expResult, result);
+    }
 }

@@ -1,9 +1,6 @@
 package at.htlgkr.schlagerflorian;
 
-import at.htlgkr.schlagerflorian.interfaces.IntIsEvenIsOdd;
-import at.htlgkr.schlagerflorian.interfaces.ListToUpperLowerCase;
-import at.htlgkr.schlagerflorian.interfaces.StringIsEmpty;
-import at.htlgkr.schlagerflorian.interfaces.SumConverter;
+import at.htlgkr.schlagerflorian.interfaces.*;
 
 import java.util.List;
 import java.util.Objects;
@@ -54,5 +51,13 @@ public class LambdaUebungen {
                 .filter(i -> i % 2 == 0)
                 .collect(Collectors.toList());
         return filterOutOdd.isEvenIsOdd(list);
+    }
+
+    //5. Write a Java program to implement a lambda expression to sort a list of strings according to their length (descending).
+    public List<String> sortListPerLength (List<String> list){
+        SortListPerLength sortListPerLength = list1 -> list1.stream()
+                .sorted((o1, o2) -> o2.length() - o1.length())
+                .collect(Collectors.toList());
+        return sortListPerLength.sortList(list);
     }
 }
