@@ -1,7 +1,5 @@
 package at.htlgkr.schlagerflorian;
 
-import org.junit.Assert;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -242,7 +240,8 @@ class LambdaUebungenTest {
 
     //8. Write a Java program to implement a lambda expression to calculate the factorial of a given number.
     @Test
-    void calculateFactorial() {
+    void calculateFactorialTest() {
+        System.out.println("calculateFactorialTest");
         int number = 5;
 
         int expResult = 120;
@@ -256,13 +255,70 @@ class LambdaUebungenTest {
 
     //9. Write a Java program to implement a lambda expression to check if a number is prime.
     @Test
-    void isPrime() {
+    void isPrimeWithPrimeNumberTest() {
+        System.out.println("isPrimeWithPrimeNumberTest");
         int number = 1;
 
         boolean expResult = true;
 
         LambdaUebungen instance = new LambdaUebungen();
         boolean result = instance.isPrime(number);
+        System.out.println("Expected: " + expResult);
+        System.out.println("Result: "  + result);
+        assertEquals(expResult, result);
+    }
+    @Test
+    void isPrimeWithNotPrimeNumberTest() {
+        System.out.println("isPrimeWithNotPrimeNumberTest");
+        int number = 15;
+
+        boolean expResult = false;
+
+        LambdaUebungen instance = new LambdaUebungen();
+        boolean result = instance.isPrime(number);
+        System.out.println("Expected: " + expResult);
+        System.out.println("Result: "  + result);
+        assertEquals(expResult, result);
+    }
+    @Test
+    void isPrimeWithNumberZeroTest() {
+        System.out.println("isPrimeWithNumberZeroTest");
+        int number = 0;
+
+        boolean expResult = false;
+
+        LambdaUebungen instance = new LambdaUebungen();
+        boolean result = instance.isPrime(number);
+        System.out.println("Expected: " + expResult);
+        System.out.println("Result: "  + result);
+        assertEquals(expResult, result);
+    }
+
+    //10. Write a Java program to implement a lambda expression to concatenate two strings.
+    @Test
+    void concatenateStringsWithNormalStringsTest() {
+        System.out.println("concatenateStringsWithNormalStringsTest");
+        String string1 = "hEllo";
+        String string2 = "worLd";
+
+        String expResult = "hElloworLd";
+
+        LambdaUebungen instance = new LambdaUebungen();
+        String result = instance.concatenateStrings(string1, string2);
+        System.out.println("Expected: " + expResult);
+        System.out.println("Result: "  + result);
+        assertEquals(expResult, result);
+    }
+    @Test
+    void concatenateStringsWithOneEmptyStringTest() {
+        System.out.println("concatenateStringsWithOneEmptyStringTest");
+        String string1 = "hello";
+        String string2 = "";
+
+        String expResult = "hello";
+
+        LambdaUebungen instance = new LambdaUebungen();
+        String result = instance.concatenateStrings(string1, string2);
         System.out.println("Expected: " + expResult);
         System.out.println("Result: "  + result);
         assertEquals(expResult, result);

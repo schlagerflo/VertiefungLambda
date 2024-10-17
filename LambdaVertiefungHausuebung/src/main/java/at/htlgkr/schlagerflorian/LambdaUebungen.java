@@ -106,4 +106,10 @@ public class LambdaUebungen {
         };
         return ifPrime.isPrime(number);
     }
+
+    //10. Write a Java program to implement a lambda expression to concatenate two strings.
+    public String concatenateStrings (String string1, String string2){
+        ConcatenateTwoStrings concatenateTwoStrings = (s1, s2) -> s1 + s2;
+        return concatenateTwoStrings.concatenate(string1, string2);
+    }
 }
