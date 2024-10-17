@@ -253,4 +253,18 @@ class LambdaUebungenTest {
         System.out.println("Result: "  + result);
         assertEquals(expResult, result);
     }
+
+    //9. Write a Java program to implement a lambda expression to check if a number is prime.
+    @Test
+    void isPrime() {
+        int number = 1;
+
+        boolean expResult = true;
+
+        LambdaUebungen instance = new LambdaUebungen();
+        boolean result = instance.isPrime(number);
+        System.out.println("Expected: " + expResult);
+        System.out.println("Result: "  + result);
+        assertEquals(expResult, result);
+    }
 }

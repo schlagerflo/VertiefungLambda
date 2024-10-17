@@ -90,4 +90,20 @@ public class LambdaUebungen {
         };
         return calculator.calculateFactorial(number);
     }
+
+    //9. Write a Java program to implement a lambda expression to check if a number is prime.
+    public boolean isPrime (int number){
+        CheckIfPrime ifPrime = number1 -> {
+            if (number1 < 1){
+                return false;
+            }
+            for (int i = 2; i < 10; i++){
+                if (number1 % i == 0){
+                    return false;
+                }
+            }
+            return true;
+        };
+        return ifPrime.isPrime(number);
+    }
 }
