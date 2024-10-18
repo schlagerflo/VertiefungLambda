@@ -174,4 +174,20 @@ public class LambdaUebungen {
         };
         return check.checkPalindrome(word);
     }
+
+    //15. Write a Java program to implement a lambda expression to calculate the sum of squares of all odd and even numbers in a list
+    public int sumEvenSquares (List<Integer> list){
+        SumOfOddEvenSquares sumEvenSquares = list1 -> list1.stream()
+                .filter(i -> i % 2 == 0)
+                .mapToInt(i -> i * i)
+                .sum();
+        return sumEvenSquares.sum(list);
+    }
+    public int sumOddSquares (List<Integer> list){
+        SumOfOddEvenSquares sumOddSquares = list1 -> list1.stream()
+                .filter(i -> i % 2 != 0)
+                .mapToInt(i -> i * i)
+                .sum();
+        return sumOddSquares.sum(list);
+    }
 }

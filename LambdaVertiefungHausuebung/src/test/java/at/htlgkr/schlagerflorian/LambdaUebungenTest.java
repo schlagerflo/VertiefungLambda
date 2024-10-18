@@ -450,4 +450,42 @@ class LambdaUebungenTest {
         System.out.println("Result: "  + result);
         assertEquals(expResult, result);
     }
+
+    //15. Write a Java program to implement a lambda expression to calculate the sum of squares of all odd and even numbers in a list
+    @Test
+    void sumEvenSquaresTest() {
+        System.out.println("sumEvenSquaresTest");
+        List<Integer> list = new ArrayList<>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
+        list.add(5);
+
+        int expResult = 20;
+
+        LambdaUebungen instance = new LambdaUebungen();
+        int result = instance.sumEvenSquares(list);
+        System.out.println("Expected: " + expResult);
+        System.out.println("Result: "  + result);
+        assertEquals(expResult, result);
+    }
+    @Test
+    void sumOddSquaresTest() {
+        System.out.println("sumOddSquaresTest");
+        List<Integer> list = new ArrayList<>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
+        list.add(5);
+
+        int expResult = 35;
+
+        LambdaUebungen instance = new LambdaUebungen();
+        int result = instance.sumOddSquares(list);
+        System.out.println("Expected: " + expResult);
+        System.out.println("Result: "  + result);
+        assertEquals(expResult, result);
+    }
 }
