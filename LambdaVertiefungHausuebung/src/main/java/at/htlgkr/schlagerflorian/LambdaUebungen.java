@@ -190,4 +190,14 @@ public class LambdaUebungen {
                 .sum();
         return sumOddSquares.sum(list);
     }
+
+    //16. Write a Java program to implement a lambda expression to check if a list of strings contains a specific word.
+    public boolean containsWord (List<String> list, String word){
+        CheckIfWordIsInList containsWord = (list1, word1) -> {
+            word1 = word1.toLowerCase();
+            list1.replaceAll(String::toLowerCase);
+            return list1.contains(word1);
+        };
+        return containsWord.contains(list, word);
+    }
 }

@@ -488,4 +488,40 @@ class LambdaUebungenTest {
         System.out.println("Result: "  + result);
         assertEquals(expResult, result);
     }
+
+    //16. Write a Java program to implement a lambda expression to check if a list of strings contains a specific word.
+    @Test
+    void containsWordWithTrueReturnTest() {
+        System.out.println("containsWordWithTrueReturnTest");
+        String word = "are";
+        List<String> list = new ArrayList<>();
+        list.add("a");
+        list.add("are");
+        list.add("beautiful");
+
+        boolean expResult = true;
+
+        LambdaUebungen instance = new LambdaUebungen();
+        boolean result = instance.containsWord(list, word);
+        System.out.println("Expected: " + expResult);
+        System.out.println("Result: "  + result);
+        assertEquals(expResult, result);
+    }
+    @Test
+    void containsWordWithFalseReturnTest() {
+        System.out.println("containsWordWithFalseReturnTest");
+        String word = "blue";
+        List<String> list = new ArrayList<>();
+        list.add("We");
+        list.add("made");
+        list.add("it");
+
+        boolean expResult = false;
+
+        LambdaUebungen instance = new LambdaUebungen();
+        boolean result = instance.containsWord(list, word);
+        System.out.println("Expected: " + expResult);
+        System.out.println("Result: "  + result);
+        assertEquals(expResult, result);
+    }
 }
