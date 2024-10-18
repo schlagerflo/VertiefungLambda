@@ -2,9 +2,8 @@ package at.htlgkr.schlagerflorian;
 
 import at.htlgkr.schlagerflorian.interfaces.*;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
 public class LambdaUebungen {
@@ -128,4 +127,17 @@ public class LambdaUebungen {
     }
 
     //12. Write a Java program to create a lambda expression to multiply and sum all elements in a list of integers
+    public int sumList (List<Integer> list){
+        MultiplyAndSumList sum = list1 -> list1.stream()
+                .mapToInt(Integer::intValue)
+                .sum();
+        return sum.multiplyAndSum(list);
+    }
+    public int multiplyList (List<Integer> list){
+        AtomicInteger factor = new AtomicInteger();
+        MultiplyAndSumList multiply = list1 -> list1.stream()
+                .reduce((a, b) -> a * b)
+                .get();
+        return multiply.multiplyAndSum(list);
+    }
 }

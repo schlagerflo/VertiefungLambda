@@ -361,4 +361,38 @@ class LambdaUebungenTest {
         System.out.println("Result: "  + result);
         assertEquals(expResult, result);
     }
+
+    //12. Write a Java program to create a lambda expression to multiply and sum all elements in a list of integers
+    @Test
+    void sumListTest() {
+        System.out.println("sumListTest");
+        List<Integer> list = new ArrayList<>();
+        list.add(48);
+        list.add(11);
+        list.add(24);
+
+        int expResult = 83;
+
+        LambdaUebungen instance = new LambdaUebungen();
+        int result = instance.sumList(list);
+        System.out.println("Expected: " + expResult);
+        System.out.println("Result: "  + result);
+        assertEquals(expResult, result);
+    }
+    @Test
+    void multiplyListTest() {
+        System.out.println("multiplyListTest");
+        List<Integer> list = new ArrayList<>();
+        list.add(5);
+        list.add(2);
+        list.add(4);
+
+        int expResult = 40;
+
+        LambdaUebungen instance = new LambdaUebungen();
+        int result = instance.multiplyList(list);
+        System.out.println("Expected: " + expResult);
+        System.out.println("Result: "  + result);
+        assertEquals(expResult, result);
+    }
 }
