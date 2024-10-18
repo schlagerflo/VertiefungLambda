@@ -323,4 +323,42 @@ class LambdaUebungenTest {
         System.out.println("Result: "  + result);
         assertEquals(expResult, result);
     }
+
+    //11. Write a Java program to implement a lambda expression to find the maximum and minimum values in a list of integers.
+    @Test
+    void getMinimumValueTest() {
+        System.out.println("getMinimumValueTest");
+        List<Integer> list = new ArrayList<>();
+        list.add(4);
+        list.add(7);
+        list.add(2);
+        list.add(6);
+        list.add(1);
+
+        int expResult = 1;
+
+        LambdaUebungen instance = new LambdaUebungen();
+        int result = instance.getMinimumValue(list);
+        System.out.println("Expected: " + expResult);
+        System.out.println("Result: "  + result);
+        assertEquals(expResult, result);
+    }
+    @Test
+    void getMaximumValueTest() {
+        System.out.println("getMaximumValueTest");
+        List<Integer> list = new ArrayList<>();
+        list.add(4);
+        list.add(7);
+        list.add(2);
+        list.add(6);
+        list.add(1);
+
+        int expResult = 7;
+
+        LambdaUebungen instance = new LambdaUebungen();
+        int result = instance.getMaximumValue(list);
+        System.out.println("Expected: " + expResult);
+        System.out.println("Result: "  + result);
+        assertEquals(expResult, result);
+    }
 }

@@ -112,4 +112,20 @@ public class LambdaUebungen {
         ConcatenateTwoStrings concatenateTwoStrings = (s1, s2) -> s1 + s2;
         return concatenateTwoStrings.concatenate(string1, string2);
     }
+
+    //11. Write a Java program to implement a lambda expression to find the maximum and minimum values in a list of integers.
+    public int getMinimumValue (List<Integer> list){
+        GetMaximumMinimumValue getMinimumValue = list1 -> list1.stream()
+                .min((x, y) -> x.compareTo(y))
+                .get();
+        return getMinimumValue.getMinimumMaximumValue(list);
+    }
+    public int getMaximumValue (List<Integer> list){
+        GetMaximumMinimumValue getMaximumValue = list1 -> list1.stream()
+                .max((x, y) -> x.compareTo(y))
+                .get();
+        return getMaximumValue.getMinimumMaximumValue(list);
+    }
+
+    //12. Write a Java program to create a lambda expression to multiply and sum all elements in a list of integers
 }
