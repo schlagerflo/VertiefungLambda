@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
+
 public class LambdaUebungen {
     public static void main(String[] args) {
 
@@ -148,5 +149,29 @@ public class LambdaUebungen {
             return words.length;
         };
         return countWords.count(sentence);
+    }
+
+    //14. Write a Java program to implement a lambda expression to check if a given string is a palindrome.
+    public boolean checkPalindrome (String word){
+        CheckIfPalindrome check = word1 -> {
+            word1 = word1.toLowerCase();
+            char[] lettersFor = new char[word1.length()];
+            char[] lettersBack = new char[word1.length()];
+
+            for (int i = 0; i < lettersFor.length; i++){
+                lettersFor[i] = word1.charAt(i);
+                lettersBack[word1.length() - i - 1] = word1.charAt(i);
+            }
+
+            for (int i = 0; i < lettersFor.length; i++)
+            {
+                if (lettersFor[i] != lettersBack[i])
+                {
+                    return false;
+                }
+            }
+            return true;
+        };
+        return check.checkPalindrome(word);
     }
 }

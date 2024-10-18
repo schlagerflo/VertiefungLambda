@@ -422,4 +422,32 @@ class LambdaUebungenTest {
         System.out.println("Result: "  + result);
         assertEquals(expResult, result);
     }
+
+    //14. Write a Java program to implement a lambda expression to check if a given string is a palindrome.
+    @Test
+    void checkPalindromeWithPalindromTest() {
+        System.out.println("checkPalindromeWithPalindromTest");
+        String word = "Lagerregal";
+
+        boolean expResult = true;
+
+        LambdaUebungen instance = new LambdaUebungen();
+        boolean result = instance.checkPalindrome(word);
+        System.out.println("Expected: " + expResult);
+        System.out.println("Result: "  + result);
+        assertEquals(expResult, result);
+    }
+    @Test
+    void checkPalindromeWithNoPalindromTest() {
+        System.out.println("checkPalindromeWithNoPalindromTest");
+        String word = "Index";
+
+        boolean expResult = false;
+
+        LambdaUebungen instance = new LambdaUebungen();
+        boolean result = instance.checkPalindrome(word);
+        System.out.println("Expected: " + expResult);
+        System.out.println("Result: "  + result);
+        assertEquals(expResult, result);
+    }
 }
