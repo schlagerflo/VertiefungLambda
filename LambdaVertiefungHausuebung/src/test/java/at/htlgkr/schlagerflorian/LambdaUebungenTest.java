@@ -524,4 +524,22 @@ class LambdaUebungenTest {
         System.out.println("Result: "  + result);
         assertEquals(expResult, result);
     }
+
+    //17. Write a Java program to implement a lambda expression to find the length of the longest and smallest string in a list.
+    @Test
+    void longestStringTest() {
+        System.out.println("longestStringTest");
+        List<String> list = new ArrayList<>();
+        list.add("Sleeping");
+        list.add("Work");
+        list.add("Handshake");
+
+        String expResult = "Handshake";
+
+        LambdaUebungen instance = new LambdaUebungen();
+        String result = instance.longestString(list);
+        System.out.println("Expected: " + expResult);
+        System.out.println("Result: "  + result);
+        assertEquals(expResult, result);
+    }
 }

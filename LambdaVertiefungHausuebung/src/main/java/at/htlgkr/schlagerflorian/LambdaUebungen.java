@@ -200,4 +200,12 @@ public class LambdaUebungen {
         };
         return containsWord.contains(list, word);
     }
+
+    //17. Write a Java program to implement a lambda expression to find the length of the longest and smallest string in a list.
+    public String longestString (List<String> list){
+        FindLongestShortestString findLongest = list1 -> list1.stream()
+                .min((s1, s2) -> s2.length() - s1.length())
+                .get();
+        return findLongest.find(list);
+    }
 }
