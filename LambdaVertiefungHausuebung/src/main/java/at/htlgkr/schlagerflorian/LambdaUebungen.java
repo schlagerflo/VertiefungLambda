@@ -208,4 +208,13 @@ public class LambdaUebungen {
                 .get();
         return findLongest.find(list);
     }
+
+    //18. Write a Java program to implement a lambda expression to check if a given number is a perfect square.
+    public boolean checkPerfectSquare (double number){
+        CheckIfNumberIsPerfectSquare check = number1 -> {
+            int root = (int) Math.sqrt(number1);
+            return root * root == number1;
+        };
+        return check.check(number);
+    }
 }

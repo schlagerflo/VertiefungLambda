@@ -542,4 +542,32 @@ class LambdaUebungenTest {
         System.out.println("Result: "  + result);
         assertEquals(expResult, result);
     }
+
+    //18. Write a Java program to implement a lambda expression to check if a given number is a perfect square.
+    @Test
+    void checkPerfectSquareWithTrueReturnTest() {
+        System.out.println("checkPerfectSquareWithTrueReturnTest");
+        int number = 16;
+
+        boolean expResult = true;
+
+        LambdaUebungen instance = new LambdaUebungen();
+        boolean result = instance.checkPerfectSquare(number);
+        System.out.println("Expected: " + expResult);
+        System.out.println("Result: "  + result);
+        assertEquals(expResult, result);
+    }
+    @Test
+    void checkPerfectSquareWithFalseReturnTest() {
+        System.out.println("checkPerfectSquareWithFalseReturnTest");
+        int number = 28;
+
+        boolean expResult = false;
+
+        LambdaUebungen instance = new LambdaUebungen();
+        boolean result = instance.checkPerfectSquare(number);
+        System.out.println("Expected: " + expResult);
+        System.out.println("Result: "  + result);
+        assertEquals(expResult, result);
+    }
 }
