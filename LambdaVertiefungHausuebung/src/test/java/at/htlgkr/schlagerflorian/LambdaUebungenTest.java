@@ -15,7 +15,9 @@ class LambdaUebungenTest {
         System.out.println("sumTestTwoPositiveNumbers");
         int number1 = 12;
         int number2 = 34;
+
         int expResult = 46;
+
         LambdaUebungen instance = new LambdaUebungen();
         int result = instance.sum(number1, number2);
         System.out.println("Expected: " + expResult);
@@ -27,7 +29,9 @@ class LambdaUebungenTest {
         System.out.println("sumTestTwoNegativeNumbers");
         int number1 = -4;
         int number2 = -3;
+
         int expResult = -7;
+
         LambdaUebungen instance = new LambdaUebungen();
         int result = instance.sum(number1, number2);
         System.out.println("Expected: " + expResult);
@@ -39,7 +43,9 @@ class LambdaUebungenTest {
         System.out.println("sumTestOnePositiveOneNegativeNumber");
         int number1 = -4;
         int number2 = 15;
+
         int expResult = 11;
+
         LambdaUebungen instance = new LambdaUebungen();
         int result = instance.sum(number1, number2);
         System.out.println("Expected: " + expResult);
@@ -53,7 +59,9 @@ class LambdaUebungenTest {
     void isStringEmptyTestWithValueInIt() {
         System.out.println("isStringEmptyTestWithValueInIt");
         String s = "Test";
+
         boolean expResult = false;
+
         LambdaUebungen instance = new LambdaUebungen();
         boolean result = instance.isStringEmpty(s);
         System.out.println("Expected: " + expResult);
@@ -64,7 +72,9 @@ class LambdaUebungenTest {
     void isStringEmptyTestWithEmptyString() {
         System.out.println("isStringEmptyTestWithEmptyString");
         String s = "";
+
         boolean expResult = true;
+
         LambdaUebungen instance = new LambdaUebungen();
         boolean result = instance.isStringEmpty(s);
         System.out.println("Expected: " + expResult);
@@ -75,7 +85,9 @@ class LambdaUebungenTest {
     void isStringEmptyTestWithEmptyStringButBlank() {
         System.out.println("isStringEmptyTestWithEmptyStringButBlank");
         String s = " ";
+
         boolean expResult = false;
+
         LambdaUebungen instance = new LambdaUebungen();
         boolean result = instance.isStringEmpty(s);
         System.out.println("Expected: " + expResult);
@@ -391,6 +403,21 @@ class LambdaUebungenTest {
 
         LambdaUebungen instance = new LambdaUebungen();
         int result = instance.multiplyList(list);
+        System.out.println("Expected: " + expResult);
+        System.out.println("Result: "  + result);
+        assertEquals(expResult, result);
+    }
+
+    //13. Write a Java program to implement a lambda expression to count words in a sentence.
+    @Test
+    void countWordsTest() {
+        System.out.println("countWordsTest");
+        String sentence = "Florian schaut heute super aus!";
+
+        int expResult = 5;
+
+        LambdaUebungen instance = new LambdaUebungen();
+        int result = instance.countWords(sentence);
         System.out.println("Expected: " + expResult);
         System.out.println("Result: "  + result);
         assertEquals(expResult, result);

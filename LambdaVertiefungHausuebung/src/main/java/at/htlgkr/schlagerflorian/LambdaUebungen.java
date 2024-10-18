@@ -140,4 +140,13 @@ public class LambdaUebungen {
                 .get();
         return multiply.multiplyAndSum(list);
     }
+
+    //13. Write a Java program to implement a lambda expression to count words in a sentence.
+    public int countWords (String sentence){
+        CountWordsInSentence countWords = word -> {
+            String[] words = sentence.split(" ");
+            return words.length;
+        };
+        return countWords.count(sentence);
+    }
 }
