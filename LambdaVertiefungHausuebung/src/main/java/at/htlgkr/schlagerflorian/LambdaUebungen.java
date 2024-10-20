@@ -2,7 +2,10 @@ package at.htlgkr.schlagerflorian;
 
 import at.htlgkr.schlagerflorian.interfaces.*;
 
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
+import java.util.OptionalInt;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
@@ -216,5 +219,27 @@ public class LambdaUebungen {
             return root * root == number1;
         };
         return check.check(number);
+    }
+
+    //19. Write a Java program to implement a lambda expression to find the second largest and smallest element in an array.
+    public int findSecondLargestElement (int[] arr){
+        findSecondLargestSmallestElement findSecondLargest = arr1 -> {
+            int[] sorted = Arrays.stream(arr1)
+                    .distinct()
+                    .sorted()
+                    .toArray();
+            return sorted[sorted.length - 2];
+        };
+        return findSecondLargest.find(arr);
+    }
+    public int findSecondSmallestElement (int[] arr){
+        findSecondLargestSmallestElement findSecondSmallest = arr1 -> {
+            int[] sorted = Arrays.stream(arr1)
+                    .distinct()
+                    .sorted()
+                    .toArray();
+            return sorted[1];
+        };
+        return findSecondSmallest.find(arr);
     }
 }

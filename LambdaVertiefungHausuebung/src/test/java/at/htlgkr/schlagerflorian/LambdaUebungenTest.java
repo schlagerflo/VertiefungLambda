@@ -570,4 +570,32 @@ class LambdaUebungenTest {
         System.out.println("Result: "  + result);
         assertEquals(expResult, result);
     }
+
+    //19. Write a Java program to implement a lambda expression to find the second largest and smallest element in an array.
+    @Test
+    void findSecondLargestElementTest() {
+        System.out.println("findSecondLargestElementTest");
+        int[] arr = {4, 9, 1, 12, 5};
+
+        int expResult = 9;
+
+        LambdaUebungen instance = new LambdaUebungen();
+        int result = instance.findSecondLargestElement(arr);
+        System.out.println("Expected: " + expResult);
+        System.out.println("Result: "  + result);
+        assertEquals(expResult, result);
+    }
+    @Test
+    void findSecondSmallestElementTest() {
+        System.out.println("findSecondSmallestElementTest");
+        int[] arr = {4, 9, 1, 12, 5};
+
+        int expResult = 4;
+
+        LambdaUebungen instance = new LambdaUebungen();
+        int result = instance.findSecondSmallestElement(arr);
+        System.out.println("Expected: " + expResult);
+        System.out.println("Result: "  + result);
+        assertEquals(expResult, result);
+    }
 }
